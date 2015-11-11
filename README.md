@@ -5,9 +5,8 @@
 	apt-get install curl -y  
 	curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -  
 	apt-get install nodejs -y  
-	apt-get install npm -y  
-	apt-get install nodejs-legacy -y  
 	apt-get install build-essential -y  
+	apt-get install docker.io -y  
 	npm install  
 	  
 	sudo -u root /bin/bash  
