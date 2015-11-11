@@ -1,0 +1,4 @@
+node_modules/
+repos/*
+Dockerfile.out
+Dockerfile.err
