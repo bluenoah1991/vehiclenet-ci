@@ -9,9 +9,9 @@ console.log('Begin test');
 //		console.log('test is completed');
 //	});
 
-//github.update()
-//	.then(function(res){
-//		console.log('test is completed');
-//	});
+github.update()
+	.then(function(res){
+		console.log('test is completed');
+	});
 
-common.update_container();
+//common.update_container();
