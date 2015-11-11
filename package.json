@@ -21,7 +21,6 @@
   },
   "dependencies": {
     "github-webhook-handler": ">= 0.5.0",
-    "docker.io": ">= 0.9.8",
     "q": "~ 1.0",
     "nodegit": ">= 0.5.0"
   }

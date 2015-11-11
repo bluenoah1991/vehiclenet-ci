@@ -2,8 +2,8 @@
 	"local":{
 		"url": "http://209.9.106.96:7777/webhook",
 		"secret": "ILOVEVICKIEZHANG",
-		"imageName": "codemeow5/test-webhooks-base-on-nodejs",
-		"containerName": "test-webhooks-container",
+		"imageName": "codemeow5/vehiclenet-python-base-on-nodejs",
+		"containerName": "vehiclenet-python-container",
 		"hostPort": 80,
 		"containerPort": 80,
 		"enviroments": [
@@ -12,7 +12,7 @@
 	},
 	"github":{
 		"username": "codemeow5",
-		"repository": "test-webhooks",
-		"branchName": "master"
+		"repository": "vehiclenet-python",
+		"branchName": "gen"
 	}
 }

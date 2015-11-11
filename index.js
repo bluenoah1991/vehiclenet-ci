@@ -5,7 +5,7 @@ var github = require('./lib/github');
 var common = require('./lib/common');
 var config = require('./config.json');
 
-var handler = createHandler({ path: '/webhook', secret: 'ILOVEVICKIEZHANG' });
+var handler = createHandler({ path: '/webhook', secret: config.local.secret });
 
 console.log(util.format('Try installing webhook on github.com/%s', config.github.repository));
 github.setup()
@@ -20,11 +20,19 @@ http.createServer(function(req, res){
 	});
 }).listen(7777);
 
+github.update()
+.then(function(){
+	debugger;
+	common.update_container();
+});
+
 handler.on('error', function(err){
+	debugger;
 	console.error('Error:', err.message);
 });
 
 handler.on('push', function(event_){
+	debugger;
 	console.log('Received a push event_ for %s to %s',
 		event_.payload.repository.name,
 		event_.payload.ref
