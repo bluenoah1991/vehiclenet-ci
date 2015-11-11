@@ -20,11 +20,14 @@ http.createServer(function(req, res){
 	});
 }).listen(7777);
 
+console.log('Update Github repository');
 github.update()
 .then(function(){
 	debugger;
 	common.update_container();
 });
+
+console.log('Register Github push event');
 
 handler.on('error', function(err){
 	debugger;
