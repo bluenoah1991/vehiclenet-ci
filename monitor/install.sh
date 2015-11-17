@@ -1,7 +1,8 @@
 #!/bin/bash
 
 apt-get install apache2-utils -y
-htdigest -c admin.htdigest localhost admin
+#htdigest -c admin.htdigest localhost admin
+htpasswd -c admin.htpasswd admin
 docker run \
 	--volume=/:/rootfs:ro \
 	--volume=/var/run:/var/run:rw \
@@ -12,4 +13,4 @@ docker run \
 	--detach=true \
 	--name=cadvisor \
 	google/cadvisor:latest \
-	-http_digest_file /root/monitor/admin.htdigest --http_digest_realm localhost
+	-http_auth_file /root/monitor/admin.htpasswd --http_auth_realm localhost
